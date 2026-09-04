@@ -11,7 +11,7 @@ A bold, responsive, one-page resume website for GitHub Pages.
 5. Under **Build and deployment**, choose **Deploy from a branch**.
 6. Select the `main` branch and the `/ (root)` folder, then save.
 
-GitHub will publish the site at [https://oceanbreeze04.github.io/mel-tech/](https://oceanbreeze04.github.io/mel-tech/).
+GitHub will publish the site at [https://oceanbreeze04.github.io](https://oceanbreeze04.github.io).
 
 ## Customize later
 
