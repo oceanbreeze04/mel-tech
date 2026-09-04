@@ -1,4 +1,4 @@
-# LA Mahoney · Resume Website
+# Melissa Mahoney · Resume Website
 
 A bold, responsive, one-page resume website for GitHub Pages.
 
