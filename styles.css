@@ -524,6 +524,108 @@ a {
   font-weight: 760;
 }
 
+.approach {
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    var(--night);
+  background-size: 48px 48px;
+  color: white;
+}
+
+.approach-glow {
+  position: absolute;
+  top: -9rem;
+  right: -8rem;
+  width: 34rem;
+  height: 34rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.3), transparent 68%);
+  pointer-events: none;
+}
+
+.approach .section-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.approach .section-label p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.approach .kicker {
+  color: var(--aqua);
+}
+
+.approach-intro,
+.beyond-intro {
+  max-width: 48rem;
+  margin: 2rem 0 0;
+  font-size: clamp(1.08rem, 2vw, 1.28rem);
+  line-height: 1.75;
+}
+
+.approach-intro {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.principle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 3.5rem;
+}
+
+.principle-card {
+  min-height: 21rem;
+  padding: 1.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.035));
+  backdrop-filter: blur(12px);
+}
+
+.principle-card:nth-child(2) {
+  transform: translateY(1.5rem);
+}
+
+.principle-number {
+  display: inline-grid;
+  width: 2.6rem;
+  height: 2.6rem;
+  place-items: center;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, var(--violet), var(--pink));
+  color: white;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.72rem;
+  font-weight: 850;
+}
+
+.principle-card:nth-child(2) .principle-number {
+  background: var(--pink);
+}
+
+.principle-card:nth-child(3) .principle-number {
+  background: var(--aqua);
+  color: var(--night);
+}
+
+.principle-card h3,
+.personality-card h3 {
+  margin: 1.5rem 0 0;
+  font-size: 1.35rem;
+  line-height: 1.22;
+  letter-spacing: -0.035em;
+}
+
+.principle-card p {
+  margin: 1rem 0 0;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.94rem;
+}
+
 .experience {
   background: var(--paper-deep);
 }
@@ -656,6 +758,67 @@ a {
   flex-wrap: wrap;
   gap: 0.55rem;
   margin-top: 1.5rem;
+}
+
+.beyond {
+  background: var(--paper-deep);
+}
+
+.beyond-intro {
+  color: var(--ink-soft);
+}
+
+.personality-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 3.5rem;
+}
+
+.personality-card {
+  position: relative;
+  min-height: 22rem;
+  padding: 1.7rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: white;
+  box-shadow: 0 18px 55px rgba(40, 25, 70, 0.07);
+  overflow: hidden;
+}
+
+.personality-card::after {
+  content: "";
+  position: absolute;
+  right: -3rem;
+  bottom: -3rem;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background: rgba(124, 58, 237, 0.06);
+}
+
+.personality-card:nth-child(2)::after {
+  background: rgba(236, 72, 153, 0.07);
+}
+
+.personality-card:nth-child(3)::after {
+  background: rgba(45, 212, 191, 0.1);
+}
+
+.personality-mark {
+  color: var(--pink);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.73rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+}
+
+.personality-card p {
+  position: relative;
+  z-index: 1;
+  margin: 1rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.94rem;
 }
 
 .contact {
@@ -798,15 +961,24 @@ a {
     border-bottom: 1px solid var(--line);
   }
 
-  .skill-grid {
+  .approach .section-label {
+    border-bottom-color: rgba(255, 255, 255, 0.14);
+  }
+
+  .skill-grid,
+  .principle-grid,
+  .personality-grid {
     grid-template-columns: 1fr;
   }
 
-  .skill-card {
+  .skill-card,
+  .principle-card,
+  .personality-card {
     min-height: auto;
   }
 
-  .skill-card:nth-child(2) {
+  .skill-card:nth-child(2),
+  .principle-card:nth-child(2) {
     transform: none;
   }
 
